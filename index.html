@@ -1,0 +1,75 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+	    Background-image: url('https://static.vecteezy.com/system/resources/thumbnails/008/023/852/small/abstract-colorful-geometric-shape-background-modern-color-background-for-your-website-vector.jpg');
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center;
+            margin: 0;
+            padding: 0;
+	    color: #00a096;
+        }
+        header {
+            background-color: #000000;
+            color: #00a096;
+            padding: 10px;
+            text-align: center;
+        }
+	.container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+
+	a {
+		color: #007bff;
+		text-decoration: none;
+	}
+	a:hover {
+		text decoration: underline;
+	}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my playground!</h1>
+    </header>
+    <div class="container">
+        <p>This is basically just something I'm using to learn to code websites on the side so none of this is real or serious.</p>
+	<p><strong>PAY NO ATTENTION TO THE MAN BEHIND THE CURTIN!</STRONG></p>
+	<p><a href="https://www.amazon.com/amazonprime?ref_=nav_ya_signin" target="_blank">visit Amazon</a>!</p>
+	<div id="game">
+		<h2>Guess the Number!</h2>
+		<p>Guess a number between 1 and 10:</p>
+		<input type="text" id="guessInput">
+		<button onclick="checkGuess()">Submit Guess</button>
+		<p id="message"></p>
+	</div>
+	<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2Y4c2p3ZDJ2YnJhMHplNXZjMzc0czN1MWZ4czVqenU0cG1wcW4xMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Da2IFCt0UYYAcq4c3r/giphy.gif" alt="Animated GIF">
+	<p><strong> *Please Note: I do not own the rights to any images on this page, this is simply for fun*</strong></p>
+    </div>
+
+    <script>
+	    const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+	    function checkGuess() {
+				const userGuess = parseInt(document.getElementById('guessInput').value);
+				if (userGuess === randomNumber) {
+						    document.getElementById('message').innerText = 'Congratulations!You are smart!';
+					    } else {
+								document.getElementById('message').innerText = 'Sorry, you are stupid!';
+							}
+			}
+    </script>
+</body>
+</html>
